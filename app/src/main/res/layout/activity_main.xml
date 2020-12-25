@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_encryption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/encryption"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/phone"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:padding="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_secret"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_encryption"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <EditText
+        android:id="@+id/et_message_body"
+        android:layout_width="370dp"
+        android:layout_height="0dp"
+        android:hint="@string/message"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="top"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:maxLength="147"
+        android:maxLines="10"
+        android:minLines="6"
+        android:padding="12sp"
+        android:scrollbars="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btn_encrypt"
+        app:layout_constraintEnd_toEndOf="@+id/et_secret"
+        app:layout_constraintStart_toStartOf="@+id/et_secret"
+        app:layout_constraintTop_toBottomOf="@+id/et_secret" />
+
+    <EditText
+        android:id="@+id/et_secret"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:gravity="top"
+        android:importantForAutofill="no"
+        android:hint="@string/secret"
+        android:inputType="text"
+        android:maxLength="3"
+        android:nestedScrollingEnabled="true"
+        android:padding="16sp"
+        android:singleLine="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_message_body"
+        app:layout_constraintEnd_toEndOf="@+id/et_phone"
+        app:layout_constraintStart_toStartOf="@+id/et_phone"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone" />
+
+    <Button
+        android:id="@+id/btn_encrypt"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/encrypt_amp_send"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_decrypt"
+        app:layout_constraintEnd_toEndOf="@+id/et_secret"
+        app:layout_constraintStart_toStartOf="@+id/et_secret" />
+
+    <Button
+        android:id="@+id/btn_decrypt"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/decrypt"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_encrypt"
+        app:layout_constraintStart_toStartOf="@+id/btn_encrypt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

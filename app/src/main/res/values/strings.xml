@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Messaging</string>
+    <string name="encrypt_amp_send"><![CDATA[Encrypt & Send]]></string>
+    <string name="decrypt">Decrypt</string>
+    <string name="secret">secret</string>
+    <string name="message">message</string>
+    <string name="phone">phone</string>
+    <string name="encryption">Encryption</string>
+</resources>
